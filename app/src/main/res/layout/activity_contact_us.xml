@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".test"
     android:weightSum="25"
     android:id="@+id/drawerLayout"
     android:fitsSystemWindows="true"
