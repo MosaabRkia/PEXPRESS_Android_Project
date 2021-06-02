@@ -46,45 +46,48 @@ public class ListFamily extends AppCompatActivity {
         ShowBar = findViewById(R.id.ShowBar);
 
 
-        navigationView.bringToFront();
-        ActionBarDrawerToggle toggle = new
-                ActionBarDrawerToggle(this, drawerLayout1, R.string.openBar, R.string.closeBar);
-        drawerLayout1.addDrawerListener(toggle);
-        toggle.syncState();
+//        navigationView.bringToFront();
+//        ActionBarDrawerToggle toggle = new
+//                ActionBarDrawerToggle(this, drawerLayout1, R.string.openBar, R.string.closeBar);
+//        drawerLayout1.addDrawerListener(toggle);
+//        toggle.syncState();
 
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(final MenuItem menuItem) {
-                // Snackbar.make(contentLayout, menuItem.getTitle() + " pressed", Snackbar.LENGTH_LONG).show();
-                // menuItem.setChecked(true);
-                switch (menuItem.getItemId()) {
-                    case R.id.nav_home:
-                        startActivity(new Intent(ListFamily.this, AfterLoginPage.class));
-                        break;
-                    case R.id.nav_Calculate:
-                        startActivity(new Intent(ListFamily.this, PricesPage.class));
-                        break;
-                    case R.id.nav_ContactUs:
-                        startActivity(new Intent(ListFamily.this, ContactUs.class));
-                        break;
-                    case R.id.nav_logout:
-                        startActivity(new Intent(ListFamily.this, MainActivity.class));
-                        break;
-                    case R.id.nav_Terms:
-                        startActivity(new Intent(ListFamily.this, Terms.class));
-                        break;
-                    case R.id.nav_Opens:
-                        startActivity(new Intent(ListFamily.this, TimesOpen.class));
-                        break;
-                    case R.id.nav_Profile:
-                        startActivity(new Intent(ListFamily.this, Profile.class));
-                        break;
-                }
-                drawerLayout1.closeDrawer(GravityCompat.START);
-                return true;
-            }
+//        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(final MenuItem menuItem) {
+//                // Snackbar.make(contentLayout, menuItem.getTitle() + " pressed", Snackbar.LENGTH_LONG).show();
+//                // menuItem.setChecked(true);
+//                switch (menuItem.getItemId()) {
+//                    case R.id.nav_home:
+//                        startActivity(new Intent(ListFamily.this, AfterLoginPage.class));
+//                        break;
+//                    case R.id.nav_Calculate:
+//                        startActivity(new Intent(ListFamily.this, PricesPage.class));
+//                        break;
+//                    case R.id.nav_ContactUs:
+//                        startActivity(new Intent(ListFamily.this, ContactUs.class));
+//                        break;
+//                    case R.id.nav_logout:
+//                        startActivity(new Intent(ListFamily.this, MainActivity.class));
+//                        break;
+//                    case R.id.nav_Terms:
+//                        startActivity(new Intent(ListFamily.this, Terms.class));
+//                        break;
+//                    case R.id.nav_Opens:
+//                        startActivity(new Intent(ListFamily.this, TimesOpen.class));
+//                        break;
+//                    case R.id.nav_Profile:
+//                        startActivity(new Intent(ListFamily.this, Profile.class));
+//                        break;
+//                }
+//                drawerLayout1.closeDrawer(GravityCompat.START);
+//                return true;
+//            }
+//
+//        });
 
-        });
+
+        // reable the commmented
 
 
         ShowBar.setOnClickListener(new View.OnClickListener() {
