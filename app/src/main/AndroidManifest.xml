@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher2_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PEXPRESS">
-        <activity android:name=".TestActivity"></activity>
+        <activity android:name=".Contactu"></activity>
+        <activity android:name=".TestActivity" />
         <activity android:name=".EditProfile" />
         <activity android:name=".PricesPage" />
         <activity android:name=".Profile" />
