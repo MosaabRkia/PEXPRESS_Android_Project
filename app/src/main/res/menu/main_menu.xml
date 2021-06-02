@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <group>
+        <item
+            android:id="@+id/nav_home"
+            android:title="Home">
+        </item>
+
+
+        <item
+            android:id="@+id/nav_Calculate"
+            android:title="Calculate Order postage" />
+
+    </group>
+
+
+
+    <item android:title="Communicate">
+
+        <menu>
+
+            <item
+                android:id="@+id/nav_ContactUs"
+                android:title="Contact Us" />
+
+            <item
+                android:id="@+id/nav_Opens"
+                android:title="Open Time" />
+
+            <item
+                android:id="@+id/nav_Terms"
+                android:title="Terms and policity" />
+        </menu>
+    </item>
+
+    <item android:title="Profile">
+
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_Profile"
+
+                    android:title="My Profile" />
+
+                <item
+                    android:id="@+id/nav_logout"
+
+                    android:title="Logout" />
+            </group>
+        </menu>
+    </item>
+</menu>
