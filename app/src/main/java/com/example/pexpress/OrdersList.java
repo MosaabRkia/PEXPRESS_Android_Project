@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
@@ -27,27 +28,52 @@ public class OrdersList extends AppCompatActivity {
     ArrayList<Order> ordersList;
     DatabaseReference reference;
     String emailIntent,nameIntent,UIDIntent;
-
+    Button addOrderButton;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_orders_list);
-
+        addOrderButton = findViewById(R.id.addOrderButton);
         LinearLayout loading = (LinearLayout) findViewById(R.id.loadingGif);
+
+
         Intent intent = getIntent();
         if (intent.getStringExtra("UID") != null) {
             UIDIntent = intent.getStringExtra("UID");
-        } else UIDIntent = "1yDeZFWsPGVFl2suOG4SJ8PKlRI2";
+        } else UIDIntent = "null";
 
+        if (intent.getStringExtra("fullName") != null) {
+            nameIntent = intent.getStringExtra("fullName");
+        } else nameIntent = "null";
+
+        if (intent.getStringExtra("email") != null) {
+            emailIntent = intent.getStringExtra("email");
+        } else emailIntent = "null";
+
+        if(UIDIntent.equals("1yDeZFWsPGVFl2suOG4SJ8PKlRI2")){
+            addOrderButton.setVisibility(View.VISIBLE);
+        }else{
+            addOrderButton.setVisibility(View.INVISIBLE);
+        }
 
         mListView = findViewById(R.id.ListOfOrders);
         orders = new ArrayList<Order>();
+        addOrderButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), add_order.class);
+                intent.putExtra("email",emailIntent);
+                intent.putExtra("fullName",nameIntent);
+                intent.putExtra("UID",UIDIntent);
+                getApplicationContext().startActivity(intent);
+            }
+        });
+
 
 
         reference = FirebaseDatabase.getInstance().getReference().child(UIDIntent);
-
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

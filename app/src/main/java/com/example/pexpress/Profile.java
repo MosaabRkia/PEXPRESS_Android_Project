@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -60,11 +61,24 @@ public class Profile extends AppCompatActivity {
             // No user is signed in go login
         } else {
 
-            if(currentUser.getUid() == "1yDeZFWsPGVFl2suOG4SJ8PKlRI2"){
+            if(currentUser.getUid().equals("1yDeZFWsPGVFl2suOG4SJ8PKlRI2")){
+// Gets the layout params that will allow you to resize the layout
+                ViewGroup.LayoutParams params = two.getLayoutParams();
+// Changes the height and width to the specified *pixels*
+                params.height = 0;
+                params.width = 0;
+                two.setLayoutParams(params);
+
                 one.setVisibility(View.VISIBLE);
                 two.setVisibility(View.INVISIBLE);
             }else{
+                ViewGroup.LayoutParams params = two.getLayoutParams();
+// Changes the height and width to the specified *pixels*
+                params.height = 0;
+                params.width = 0;
+                two.setLayoutParams(params);
                 one.setVisibility(View.INVISIBLE);
+                two.setVisibility(View.VISIBLE);
             }
 
             // User logged in

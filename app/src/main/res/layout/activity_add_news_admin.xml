@@ -23,13 +23,14 @@
             android:weightSum="5">
 
             <ImageView
+                android:id="@+id/backArrow"
                 android:layout_width="50dp"
                 android:layout_height="89dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"
                 android:layout_gravity="end"
-                app:srcCompat="@drawable/arrowbackleft" />
+                app:srcCompat="@drawable/arrowww" />
             <Space
                 android:layout_width="230dp"
                 android:layout_height="match_parent"/>

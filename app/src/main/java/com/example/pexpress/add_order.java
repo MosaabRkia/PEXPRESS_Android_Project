@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,7 +36,7 @@ public class add_order extends AppCompatActivity {
     Button addOrderBtn;
     FirebaseFirestore db;
     AlertDialog.Builder sucessAlert;
-
+    ImageView backArrow;
 
     List<Order> ordersList;
     DatabaseReference reference;
@@ -46,7 +47,7 @@ public class add_order extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_order);
 
-//        fAuth = FirebaseAuth.getInstance();
+
         fStore = FirebaseFirestore.getInstance();
 
         ordersList = new ArrayList<>();
@@ -59,6 +60,17 @@ public class add_order extends AppCompatActivity {
         addOrderBtn = findViewById(R.id.addOrderBtn);
         countyFrom = findViewById(R.id.orderCountryAdd);
         addressTo = findViewById(R.id.orderAddressAdd);
+
+
+        backArrow = findViewById(R.id.backArrow);
+        backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Profile.class));
+            }
+        });
+
+
 
         Intent intent = getIntent();
         if (intent.getStringExtra("email") != null) {

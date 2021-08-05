@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -61,10 +62,18 @@ public class add_news_admin extends AppCompatActivity {
         uploadImageBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    openImage();
+                openImage();
             }
 
 
+        });
+
+        ImageView backArrow = findViewById(R.id.backArrow);
+        backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Profile.class));
+            }
         });
 
         addNewsBtn.setOnClickListener(new View.OnClickListener() {
@@ -143,7 +152,7 @@ public class add_news_admin extends AppCompatActivity {
                                                     .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                                                         @Override
                                                         public void onClick(DialogInterface dialog, int which) {
-                                                            startActivity(new Intent(getApplicationContext(), AdminShowUsers.class));
+                                                            startActivity(new Intent(getApplicationContext(), Profile.class));
                                                         }
                                                     }).create().show();
                                         }

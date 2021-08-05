@@ -57,7 +57,7 @@ public class UserListAdapter extends ArrayAdapter<User> {
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext, add_order.class);
+                Intent intent = new Intent(mContext, OrdersList.class);
                 intent.putExtra("email",tvEmail);
                 intent.putExtra("fullName",tvName);
                 intent.putExtra("UID",UID);

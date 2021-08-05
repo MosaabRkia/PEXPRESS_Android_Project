@@ -12,7 +12,7 @@
 
         <item
             android:id="@+id/nav_Calculate"
-            android:title="Calculate Order postage" />
+            android:title="Order Prices" />
 
     </group>
 

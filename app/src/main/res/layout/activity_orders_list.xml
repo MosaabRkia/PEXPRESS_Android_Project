@@ -23,11 +23,11 @@
             android:weightSum="3">
 
             <ImageView
-                android:id="@+id/ShowBar"
+                android:id="@+id/backArrow"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/menu10225" />
+                app:srcCompat="@drawable/arrowww" />
 
             <Space
                 android:layout_width="95dp"
@@ -51,7 +51,7 @@
 
             <TextView
                 android:id="@+id/textViewD"
-                android:layout_width="match_parent"
+                android:layout_width="350dp"
                 android:layout_height="80dp"
                 android:layout_marginTop="45dp"
                 android:text="Orders List"
@@ -59,6 +59,15 @@
                 android:textColor="#000000"
                 android:textSize="50dp"
                 android:textStyle="bold" />
+            <Button
+                android:id="@+id/addOrderButton"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:background="@drawable/shapeofbutton"
+                android:text="+"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                app:backgroundTint="@color/black" />
 
         </LinearLayout>
 

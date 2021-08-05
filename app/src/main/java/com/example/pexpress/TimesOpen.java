@@ -22,10 +22,11 @@ public class TimesOpen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_times_open);
+        setContentView(R.layout.activity_contactu);
 
         navigationView = findViewById(R.id.nav_view_test);
         drawerLayout1=findViewById(R.id.drawerLayout);
+
         navigationView.bringToFront();
         ActionBarDrawerToggle toggle = new
                 ActionBarDrawerToggle(this, drawerLayout1, R.string.openBar, R.string.closeBar);
@@ -44,7 +45,6 @@ public class TimesOpen extends AppCompatActivity {
                     case R.id.nav_Calculate:
                         startActivity(new Intent(TimesOpen.this, PricesPage.class));
                         break;
-
                     case R.id.nav_logout:
                         startActivity(new Intent(TimesOpen.this, MainActivity.class));
                         break;
@@ -54,8 +54,8 @@ public class TimesOpen extends AppCompatActivity {
                     case R.id.nav_Opens:
                         startActivity(new Intent(TimesOpen.this, TimesOpen.class));
                         break;
-
                 }
+
                 drawerLayout1.closeDrawer(GravityCompat.START);
                 return true;
             }
