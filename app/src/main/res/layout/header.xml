@@ -6,7 +6,7 @@
     android:layout_height="200dp"
     android:orientation="vertical"
     android:gravity="bottom"
-    android:background="#D80B0B"
+    android:background="@drawable/gradient"
     android:padding="20dp"
     >
     <LinearLayout

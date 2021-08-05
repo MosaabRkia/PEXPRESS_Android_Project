@@ -36,4 +36,14 @@
     <string name="Trems">Terms and Conditions of Employment and related policies can be updated from time to time. Please contact your human resources advisor to ensure that you have the correct information pertaining to your situation.
 The Compensation and Labour Relations Branch is responsible for the development, publication, maintenance, and interpretation of the terms and conditions of employment for persons appointed to a position as a term, indeterminate, casual, seasonal, or part-time worker, as well as for excluded and unrepresented employees, in departments and agencies of the Core Public Administration, named in Schedule I and Schedule IV of the Financial Administration Act.
 The terms and conditions of employment are set out in the relevant collective agreements as well as supplemented in the Policy on Terms and Conditions of Employment and other relevant policy instruments.</string>
+    <string name="title_activity_nav">NavActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
 </resources>

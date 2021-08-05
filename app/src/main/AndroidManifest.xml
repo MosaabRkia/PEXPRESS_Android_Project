@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher2_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PEXPRESS">
-        <activity android:name=".Contactu"></activity>
+        <activity android:name=".add_news_admin"></activity>
+        <activity android:name=".news_page" />
+        <activity android:name=".OrdersList" />
+        <activity android:name=".add_order" />
+        <activity android:name=".AdminShowUsers" />
+        <activity android:name=".Contactu" />
         <activity android:name=".TestActivity" />
         <activity android:name=".EditProfile" />
         <activity android:name=".PricesPage" />
@@ -20,7 +25,6 @@
         <activity android:name=".ContactUs" />
         <activity android:name=".AfterLoginPage" />
         <activity android:name=".Terms" />
-        <activity android:name=".test" />
         <activity android:name=".RegisterPage" />
         <activity android:name=".SplashScreen">
             <intent-filter>

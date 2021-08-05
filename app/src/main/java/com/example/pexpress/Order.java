@@ -1,24 +1,37 @@
 package com.example.pexpress;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 public class Order {
-    String orderId , status;
-    int bornYear,bornDay,bornMonth;
 
-    public Order(String orderId, String status, int bornYear, int bornDay, int bornMonth) {
-       setOrderId(orderId);
-        setStatus(status);
-        setBornYear(bornYear);
-        setBornDay(bornDay);
-        setBornMonth(bornMonth);
+    public String status;
+    public String userEmail;
+    public String country_from;
+    public String address_to;
+    public Date date;
+
+    public Order(String status, String userEmail, String country_from, String address_to) {
+        this.status = status;
+        this.userEmail = userEmail;
+        this.date = new Date();
+        this.country_from = country_from;
+        this.address_to = address_to;
     }
 
-    public String getOrderId() {
-        return orderId;
-    }
+    public Order(){}
 
-    public void setOrderId(String orderId) {
-        this.orderId = orderId;
-    }
+//    public Order( String address_to, String country_from,Date date,String status, String userEmail) {
+//        this.status = status;
+//        this.userEmail = userEmail;
+//        this.date = date;
+//        this.country_from = country_from;
+//        this.address_to = address_to;
+//    }
+
+public String print(){
+      return status+userEmail+country_from+address_to;
+}
+
 
     public String getStatus() {
         return status;
@@ -28,30 +41,37 @@ public class Order {
         this.status = status;
     }
 
-    public int getBornYear() {
-        return bornYear;
+    public String getUserEmail() {
+        return userEmail;
     }
 
-    public void setBornYear(int bornYear) {
-        this.bornYear = bornYear;
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
     }
 
-    public int getBornDay() {
-        return bornDay;
+    public Date getDate() {
+        return date;
     }
 
-    public void setBornDay(int bornDay) {
-        this.bornDay = bornDay;
+    public void setDate(Date date) {
+        this.date = date;
     }
 
-    public int getBornMonth() {
-        return bornMonth;
+    public String getCountry_from() {
+        return country_from;
     }
 
-    public void setBornMonth(int bornMonth) {
-        this.bornMonth = bornMonth;
+    public void setCountry_from(String country_from) {
+        this.country_from = country_from;
     }
-    public String toString() {
-        return ("order Id :" + getOrderId() + "\nstatus" + getStatus()+"\nOrder Date :" + getBornDay() + "/" + getBornMonth() + "/" + getBornYear());
+
+    public String getAddress_to() {
+        return address_to;
     }
+
+    public void setAddress_to(String address_to) {
+        this.address_to = address_to;
+    }
+//    SimpleDateFormat ft = new SimpleDateFormat ("E yyyy.MM.dd");
+
 }

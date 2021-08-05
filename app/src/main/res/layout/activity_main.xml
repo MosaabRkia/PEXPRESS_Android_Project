@@ -115,17 +115,21 @@
                 android:textColor="@color/white"
                 android:layout_height="50dp"
                 android:layout_marginTop="0dp"
+                android:inputType="textPassword"
                 android:id="@+id/LoginPassword"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginBottom="0dp" />
+
             <TextView
-                android:layout_width="match_parent"
+                android:id="@+id/forgotPassword"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Forgot Password?"
+                android:layout_gravity="end"
                 android:layout_marginRight="20dp"
-                android:textColor="@color/white"
-                android:textAlignment="textEnd"/>
+                android:text="Forgot Password?"
+                android:textAlignment="textEnd"
+                android:textColor="@color/white" />
         </LinearLayout>
 
         <LinearLayout

@@ -11,6 +11,9 @@ import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class SplashScreen extends AppCompatActivity {
 
     private static int TIMER1 = 1500;
@@ -19,12 +22,14 @@ public class SplashScreen extends AppCompatActivity {
      TextView Text1;
      TextView Text2;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
         Text1 = findViewById(R.id.SplashScreenText);
         Text2 = findViewById(R.id.SplashScreenText1);
         X = findViewById(R.id.SplashScreenLogo);
@@ -54,9 +59,11 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void run() {
                 X.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(SplashScreen.this,MainActivity.class);
-                startActivity(intent);
 
+
+
+                Intent intent = new Intent(getApplicationContext(),currentUser != null?Profile.class:MainActivity.class);
+                startActivity(intent);
                 finish();
             }
         },TIMER);

@@ -19,30 +19,41 @@
             android:layout_width="match_parent"
             android:layout_height="75dp"
             android:layout_weight="4"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:weightSum="5">
 
             <ImageView
-                android:layout_width="match_parent"
+                android:layout_width="50dp"
                 android:layout_height="89dp"
                 android:layout_marginTop="25dp"
-                android:layout_weight="2"
-                android:textAlignment="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:layout_gravity="end"
+                app:srcCompat="@drawable/arrowbackleft" />
+            <Space
+                android:layout_width="230dp"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="89dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="25dp"
+                android:layout_weight="1"
                 app:srcCompat="@drawable/removecoloredlogo" />
 
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="15dp"
             android:layout_weight="3">
 
             <TextView
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
-                android:text="Register"
+                android:text="add news"
                 android:textColor="@color/white"
                 android:textSize="25dp"
                 android:textStyle="bold" />
@@ -56,14 +67,14 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="70dp"
+                android:layout_width="198dp"
                 android:layout_height="20dp"
                 android:layout_marginLeft="23dp"
-                android:text="First name"
+                android:text="title of new"
                 android:textColor="@color/white" />
 
             <EditText
-                android:id="@+id/resetPassword"
+                android:id="@+id/titleNewAdd"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginLeft="20dp"
@@ -83,16 +94,16 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="70dp"
+                android:layout_width="320dp"
                 android:layout_height="20dp"
                 android:layout_marginLeft="23dp"
-                android:text="Last name"
+                android:text="description of new"
                 android:textColor="@color/white" />
 
             <EditText
-                android:id="@+id/lastNameRegister"
+                android:id="@+id/descriptionNewAdd"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="69dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="0dp"
                 android:layout_marginRight="20dp"
@@ -101,84 +112,19 @@
                 android:textColor="@color/white"
                 app:backgroundTint="@color/white" />
         </LinearLayout>
-
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="11dp"
-            android:layout_marginBottom="0dp"
-            android:layout_weight="4.5"
-            android:orientation="vertical">
+            android:layout_height="13dp"
+            android:layout_weight="3"
+            android:gravity="center">
 
-            <TextView
-                android:layout_width="70dp"
-                android:layout_height="20dp"
-                android:layout_marginLeft="23dp"
-                android:text="Email"
-                android:textColor="@color/white" />
-
-            <EditText
-                android:id="@+id/emailRegister"
-                android:layout_width="match_parent"
+            <Button
+                android:id="@+id/uploadImageBtn"
+                android:layout_width="wrap_content"
                 android:layout_height="45dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="0dp"
-                android:inputType="textEmailAddress"
-                android:textColor="@color/white"
-                app:backgroundTint="@color/white" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="11dp"
-            android:layout_marginBottom="0dp"
-            android:layout_weight="4.5"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="70dp"
-                android:layout_height="20dp"
-                android:layout_marginLeft="23dp"
-                android:text="Password"
-                android:textColor="@color/white" />
-
-            <EditText
-                android:id="@+id/passwordRegister"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="0dp"
-                android:inputType="textPassword"
-                android:textColor="@color/white"
-                app:backgroundTint="@color/white" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="11dp"
-            android:layout_marginBottom="35dp"
-            android:layout_weight="4.5"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="157dp"
-                android:layout_height="20dp"
-                android:layout_marginLeft="23dp"
-                android:text="Current password"
-                android:textColor="@color/white" />
-
-            <EditText
-                android:id="@+id/confirmPasswordRegister"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginLeft="20dp"
-                android:inputType="textPassword"
-                android:layout_marginTop="0dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="0dp"
+                android:background="@drawable/shapeofbutton"
+                android:text="Upload image"
+                android:textAlignment="center"
                 android:textColor="@color/white"
                 app:backgroundTint="@color/white" />
         </LinearLayout>
@@ -190,11 +136,11 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/registerButton"
+                android:id="@+id/addNewsBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:background="@drawable/shapeofbutton"
-                android:text="Create Account"
+                android:text="add news"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 app:backgroundTint="@color/white" />

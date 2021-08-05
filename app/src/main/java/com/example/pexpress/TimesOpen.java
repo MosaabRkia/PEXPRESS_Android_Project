@@ -24,7 +24,7 @@ public class TimesOpen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_times_open);
 
-        navigationView = findViewById(R.id.nav_view);
+        navigationView = findViewById(R.id.nav_view_test);
         drawerLayout1=findViewById(R.id.drawerLayout);
         navigationView.bringToFront();
         ActionBarDrawerToggle toggle = new
@@ -39,14 +39,12 @@ public class TimesOpen extends AppCompatActivity {
                 // menuItem.setChecked(true);
                 switch (menuItem.getItemId()) {
                     case R.id.nav_home:
-                        startActivity(new Intent(TimesOpen.this, AfterLoginPage.class));
+                        startActivity(new Intent(TimesOpen.this, Profile.class));
                         break;
                     case R.id.nav_Calculate:
                         startActivity(new Intent(TimesOpen.this, PricesPage.class));
                         break;
-                    case R.id.nav_ContactUs:
-                        startActivity(new Intent(TimesOpen.this, ContactUs.class));
-                        break;
+
                     case R.id.nav_logout:
                         startActivity(new Intent(TimesOpen.this, MainActivity.class));
                         break;
@@ -56,9 +54,7 @@ public class TimesOpen extends AppCompatActivity {
                     case R.id.nav_Opens:
                         startActivity(new Intent(TimesOpen.this, TimesOpen.class));
                         break;
-                    case R.id.nav_Profile:
-                        startActivity(new Intent(TimesOpen.this, Profile.class));
-                        break;
+
                 }
                 drawerLayout1.closeDrawer(GravityCompat.START);
                 return true;

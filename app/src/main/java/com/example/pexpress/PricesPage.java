@@ -25,7 +25,7 @@ public class PricesPage extends AppCompatActivity {
         setContentView(R.layout.activity_prices_page);
 
         drawerLayout1=findViewById(R.id.drawerLayout);
-        navigationView=findViewById(R.id.nav_view);
+        navigationView=findViewById(R.id.nav_view_test);
 
         ShowBar = findViewById(R.id.ShowBar);
 
@@ -40,14 +40,12 @@ public class PricesPage extends AppCompatActivity {
             public boolean onNavigationItemSelected(final MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.nav_home:
-                        startActivity(new Intent(PricesPage.this, AfterLoginPage.class));
+                        startActivity(new Intent(PricesPage.this, Profile.class));
                         break;
                     case R.id.nav_Calculate:
                         startActivity(new Intent(PricesPage.this, PricesPage.class));
                         break;
-                    case R.id.nav_ContactUs:
-                        startActivity(new Intent(PricesPage.this, ContactUs.class));
-                        break;
+
                     case R.id.nav_logout:
                         startActivity(new Intent(PricesPage.this, MainActivity.class));
                         break;
@@ -57,9 +55,7 @@ public class PricesPage extends AppCompatActivity {
                     case R.id.nav_Opens:
                         startActivity(new Intent(PricesPage.this, TimesOpen.class));
                         break;
-                    case R.id.nav_Profile:
-                        startActivity(new Intent(PricesPage.this, Profile.class));
-                        break;
+
                 }
                 drawerLayout1.closeDrawer(GravityCompat.START);
                 return true;

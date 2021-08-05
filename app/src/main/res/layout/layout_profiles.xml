@@ -6,39 +6,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="51dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="25dp"
-        tools:srcCompat="@tools:sample/avatars" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:textAlignment="center"
+        android:weightSum="4"
+        android:layout_height="100dp">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:weightSum="3">
+           <TextView
+               android:layout_width="95dp"
+               android:layout_height="match_parent"
+               android:text="Order ID:"
+               android:gravity="end"
+               android:layout_marginTop="25dp"
+               />
+           <TextView
+               android:layout_marginTop="25dp"
+               android:layout_marginLeft="5dp"
+               android:id="@+id/textView_fullName"
+               android:layout_width="300dp"
+               android:layout_height="match_parent"
+               android:text="TextView"
+               android:layout_weight="1.5"
+               android:textSize="12dp" />
+       </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:weightSum="3">
+            <TextView
+                android:layout_width="95dp"
+                android:layout_height="match_parent"
+                android:text="Country:"
+                android:gravity="end"
+                android:layout_marginTop="5dp"
+                />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/textView_email"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:text="TextView"
+                android:layout_weight="1.5"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="20dp">
+
+       </LinearLayout>
+
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/textView_Description"
-        android:layout_width="208dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="39dp"
-        android:text="TextView"
-        android:textSize="12dp" />
-
-    <TextView
-        android:id="@+id/textView_Name"
-        android:layout_width="263dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="34dp"
-        android:layout_toEndOf="@+id/imageView1"
-        android:text="TextView" />
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="bottom"
+        android:text="___________________________________________________________"
+        android:textColor="@color/white" />
 </RelativeLayout>
