@@ -112,9 +112,6 @@ public class MainActivity extends AppCompatActivity {
                 CheckLogin();
             }
         });
-
-
-
     }
 
     @Override
