@@ -89,7 +89,6 @@ public class add_order extends AppCompatActivity {
         }
         if (intent.getStringExtra("UID") != null){
             UIDIntent = intent.getStringExtra("UID");
-            Toast.makeText(getApplicationContext(),UIDIntent, Toast.LENGTH_SHORT).show();
         }
 
         Spinner dropdown = (Spinner)findViewById(R.id.spinner1);
@@ -100,7 +99,7 @@ public class add_order extends AppCompatActivity {
 
         String text = dropdown.getSelectedItem().toString();
         Log.d("foundItItIt",text);
-
+        Toast.makeText(getApplicationContext(),UIDIntent, Toast.LENGTH_SHORT).show();
         reference = FirebaseDatabase.getInstance().getReference().child(UIDIntent);
         addOrderBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,6 +115,23 @@ public class add_order extends AppCompatActivity {
                                ordersList.add(order);
                            }
 
+                           Order ord = new Order(valueSelected, emailIntent, countyFrom.getText().toString(), addressTo.getText().toString());
+                           ordersList.add(ord);
+                           reference.setValue(ordersList).addOnSuccessListener(new OnSuccessListener<Void>() {
+                               @Override
+                               public void onSuccess(Void aVoid) {
+                                   sucessAlert.setTitle("sucessfully added order for user " + nameIntent)
+                                           .setMessage("UID : " + UIDIntent)
+                                           .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                               @Override
+                                               public void onClick(DialogInterface dialog, int which) {
+                                                   startActivity(new Intent(getApplicationContext(), AdminShowUsers.class));
+                                               }
+                                           }).create().show();
+                               }
+                           });
+                       }
+                       else{
                            Order ord = new Order(valueSelected, emailIntent, countyFrom.getText().toString(), addressTo.getText().toString());
                            ordersList.add(ord);
                            reference.setValue(ordersList).addOnSuccessListener(new OnSuccessListener<Void>() {

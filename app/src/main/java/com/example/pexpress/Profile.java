@@ -53,8 +53,8 @@ public class Profile extends AppCompatActivity {
         MyOrdersBtn = findViewById(R.id.MyOrdersBtn);
         NewsBtn = findViewById(R.id.NewsBtn);
         usersBtnAdmin = findViewById(R.id.usersBtnAdmin);
-        LinearLayout one = (LinearLayout) findViewById(R.id.usersBtnAdminLinear);
-        LinearLayout two = (LinearLayout) findViewById(R.id.myOrdersLinear);
+        LinearLayout adminBTN = (LinearLayout) findViewById(R.id.usersBtnAdminLinear);
+        LinearLayout ordersBTN = (LinearLayout) findViewById(R.id.myOrdersLinear);
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser == null) {
@@ -63,22 +63,20 @@ public class Profile extends AppCompatActivity {
 
             if(currentUser.getUid().equals("1yDeZFWsPGVFl2suOG4SJ8PKlRI2")){
 // Gets the layout params that will allow you to resize the layout
-                ViewGroup.LayoutParams params = two.getLayoutParams();
+                ViewGroup.LayoutParams params = ordersBTN.getLayoutParams();
 // Changes the height and width to the specified *pixels*
                 params.height = 0;
                 params.width = 0;
-                two.setLayoutParams(params);
+                ordersBTN.setLayoutParams(params);
 
-                one.setVisibility(View.VISIBLE);
-                two.setVisibility(View.INVISIBLE);
+
             }else{
-                ViewGroup.LayoutParams params = two.getLayoutParams();
+                ViewGroup.LayoutParams params = adminBTN.getLayoutParams();
 // Changes the height and width to the specified *pixels*
                 params.height = 0;
                 params.width = 0;
-                two.setLayoutParams(params);
-                one.setVisibility(View.INVISIBLE);
-                two.setVisibility(View.VISIBLE);
+                adminBTN.setLayoutParams(params);
+
             }
 
             // User logged in
